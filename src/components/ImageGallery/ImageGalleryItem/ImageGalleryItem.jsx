@@ -12,11 +12,14 @@ export class ImageGalleryItem extends Component {
 
   getSnapshotBeforeUpdate(prevProps, prevState) {
     const scrollY = window.scrollY;
+
     this.scroll = scrollY;
   }
 
   componentDidUpdate() {
-    window.scrollTo(0, this.scroll);
+    const scrollToY = this.scroll;
+    window.scrollTo(0, scrollToY);
+
   }
 
   hendelClick = evt => {
