@@ -8,8 +8,8 @@ export class ImageGalleryItem extends Component {
     return (
       <>
         {this.props.data?.map(obj => (
-          <li className={css.gallery_item}>
-            <img src={obj.url} alt={obj.alt} />
+          <li key={obj.id} className={css.gallery_item}>
+            <img src={obj.webformatURL} alt={obj.largeImageURL} />
           </li>
         ))}
       </>

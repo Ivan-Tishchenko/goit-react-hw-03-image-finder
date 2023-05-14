@@ -12,7 +12,9 @@ export class Searchbar extends Component {
 
   hendelSubmit = evt => {
     evt.preventDefault();
+
     this.props.hendelSubmit(this.state.searchWord.trim());
+    
     evt.currentTarget.reset();
   };
 
