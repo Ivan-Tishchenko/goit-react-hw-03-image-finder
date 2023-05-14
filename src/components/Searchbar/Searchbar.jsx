@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import css from './Searchbar.module.css';
+import PropTypes from 'prop-types';
 
 export class Searchbar extends Component {
   state = {
-    searchWord: 'asd',
+    searchWord: '',
   };
 
   hendelInput = ({ target: { value } }) => {
@@ -14,7 +15,7 @@ export class Searchbar extends Component {
     evt.preventDefault();
 
     this.props.hendelSubmit(this.state.searchWord.trim());
-    
+
     evt.currentTarget.reset();
   };
 
@@ -39,3 +40,7 @@ export class Searchbar extends Component {
     );
   }
 }
+
+Searchbar.propTypes = {
+  handleSubmit: PropTypes.func,
+};

@@ -28,7 +28,6 @@ export class App extends Component {
   };
 
   render() {
-    console.log(this.state);
     return (
       <>
         <Searchbar hendelSubmit={this.hendelSubmit} />
